@@ -1,0 +1,66 @@
+#top {
+    background-color: #E4F9F5;
+    padding-top: 13%;
+    padding-bottom: 13%;
+
+    /* scroll-snap-align: center; */
+}
+
+#middle {
+    text-align: center;
+    padding: 15% 15%;
+}
+
+#bottom {
+    background-color: #E4F9F5;
+    padding: 7% 15%;
+}
+
+.nav-link.nav-link:hover {
+    color: #11999E;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #11999E;
+    border-color: #11999E;
+}
+
+.btn-primary:hover {
+    color: #11999E !important;
+    border-color: #11999E !important;
+    background-color: white !important;
+}
+
+.btn-outline-primary {
+    color: #11999E !important;
+    border-color: #11999E !important;
+}
+
+.btn-outline-primary:hover {
+    color: white !important;
+    background-color: #119e92 !important;
+}
+
+button {
+    width: 5.5rem;
+}
+
+h2 {
+    font-size: normal;
+    font-weight: lighter;
+}
+
+h5 {
+    color: #11999E;
+}
+
+/* For scroll-snapping */
+/* .scroll-snap {
+    max-height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+    padding: 0 !important;
+} */

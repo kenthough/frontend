@@ -1,0 +1,63 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #E4F9F5;
+}
+
+td {
+    width: 20rem;
+    padding-top: 0.5rem;
+}
+
+table {
+    margin: auto;
+    text-align: center;
+}
+
+.signup-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 25px;
+}
+
+/* .form-signin {
+    max-width: 330px;
+    padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+} */
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #11999E;
+    border-color: #11999E;
+}
+
+.btn-primary:hover {
+    color: #11999E !important;
+    border-color: #11999E !important;
+    background-color: white !important;
+}
