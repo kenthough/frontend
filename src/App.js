@@ -7,8 +7,8 @@ import Faq from './files/IndexPage/Faq.js';
 // import DBSidePanel from './files/Dashboard/DashboardPanels/DBSidePanel.js';
 // import Dashboard from './files/Dashboard/Dashboard.js';
 
-// import Login from './files/Login/Login.js';
-// import SignUp from './files/SignUp/SignUp.js';
+import Login from './files/Login/Login.js';
+import SignUp from './files/SignUp/SignUp.js';
 
 import {
   BrowserRouter as Router,
@@ -17,14 +17,21 @@ import {
   Link
 } from "react-router-dom";
 
+
 function renderTopPanel(){
-  
-  return <TopPanel />
+  if( window.location.pathname !== "/login" && window.location.pathname !== "/register"){
+    return <TopPanel />
+  } else {
+    return ''
+  }
 }
 
 function renderBottomPanel(){
-  
-  return <BottomPanel />
+  if( window.location.pathname !== "/login" && window.location.pathname !== "/register"){
+    return <BottomPanel />
+  } else {
+    return ''
+  }
 }
 
 function App() {
@@ -32,15 +39,17 @@ function App() {
     <Router>
       {/* <DBTopPanel />
       <DBSidePanel /> */}
-      {window.location.pathname !== "/login" ? <TopPanel/> : ''}
       {/* <Login /> */}
       {/* <SignUp /> */}
+      {renderTopPanel()}
       <Switch>
-        <Route exact path='/' element={<HomeContent />} />
-        <Route exact path='/about' element={<About />} />
-        <Route exact path='/faq' element={<Faq />} />
+          <Route index element={<HomeContent/>}/>
+          <Route exact path='/about' element={<About />} />
+          <Route exact path='/faq' element={<Faq />} />
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/register' element={<SignUp />} />
       </Switch>
-      {window.location.pathname !== "/login" ? <BottomPanel/> : ''}
+      {renderBottomPanel()}
     </Router>
   );
 }

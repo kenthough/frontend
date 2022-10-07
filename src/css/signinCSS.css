@@ -1,9 +1,6 @@
-html,
-body {
-    height: 100%;
-}
-
-body {
+.login-body {
+    /* viewport height - resolution of browser */
+    height: 100vh; 
     display: flex;
     align-items: center;
     padding-top: 40px;
@@ -11,17 +8,18 @@ body {
     background-color: #E4F9F5;
 }
 
-td {
+.login-td {
     width: 20rem;
     padding-top: 0.5rem;
 }
 
-table {
+.logintable {
     margin: auto;
     text-align: center;
 }
 
 .signup-box {
+    margin: auto;
     background-color: white;
     padding: 2rem;
     border-radius: 25px;
