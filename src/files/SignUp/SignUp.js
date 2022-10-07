@@ -5,15 +5,16 @@ function SignUp() {
   return (
     <main className="form-signin m-auto">
         <div className="signup-box">
-            <form name='f' th:action="@{/register}" th:object="${user}" method='POST' style="flex-direction: column; justify-content: center;">
+            {/* form action th:action="@{/register}" th:object="${user}" */}
+            <form name='f' method='POST' style={{flexDirection: "column", justifyContent: "center"}}>
                 <h3 className="text-start">Start your journey with us</h3>
-                <p className="text-start" style="width: 20rem;">Discover the art of breathing new life into your old electronics.</p>
-                <table style="margin:auto;">
+                <p className="text-start" style={{width: "20rem"}}>Discover the art of breathing new life into your old electronics.</p>
+                <table style={{margin: "auto"}}>
                     <tr>
                         <div className="form-floating">
-                            <div th:if="${error != null}">
+                            {/* <div th:if="${error != null}">
                                 <p style="display: inline-block;" className="text-danger text-center">[[${error}]]</p>
-                            </div>
+                            </div> */}
                             <td>
                                 <input name='username' type="text" className="form-control" id="usernameInput" placeholder="Username*" min = "5" max = "20" required/>
                             </td>
@@ -61,8 +62,8 @@ function SignUp() {
             </form>
         </div>
         <br/>
-        <div className="redirect-login" style="display: flex; justify-content: center;">
-            <p style="margin-right: 2%;">Already have an account?</p>
+        <div className="redirect-login" style={{display: "flex", justifyContent: "center"}}>
+            <p style={{marginRight: "2%"}}>Already have an account?</p>
             <a href="/login">Log in instead.</a>
         </div>
         <br/>

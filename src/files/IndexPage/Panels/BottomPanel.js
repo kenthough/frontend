@@ -1,5 +1,5 @@
-import '../../css/indexCSS.css';
-import long_logo from '../../images/long_logo.png'
+import '../../../css/indexCSS.css';
+import long_logo from '../../../images/long_logo.png'
 
 function BottomPanel() {
   return (

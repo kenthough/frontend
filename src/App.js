@@ -1,9 +1,14 @@
-import TopPanel from './files/TopPanel/TopPanel.js';
-import BottomPanel from './files/BottomPanel/BottomPanel.js';
+import TopPanel from './files/IndexPage/Panels/TopPanel.js';
+import BottomPanel from './files/IndexPage/Panels/BottomPanel.js';
 import HomeContent from './files/IndexPage/HomeContent.js';
 import About from './files/IndexPage/About.js';
 import Faq from './files/IndexPage/Faq.js';
+// import DBTopPanel from './files/Dashboard/DashboardPanels/DBTopPanel.js';
+// import DBSidePanel from './files/Dashboard/DashboardPanels/DBSidePanel.js';
+// import Dashboard from './files/Dashboard/Dashboard.js';
+
 // import Login from './files/Login/Login.js';
+// import SignUp from './files/SignUp/SignUp.js';
 
 import {
   BrowserRouter as Router,
@@ -13,41 +18,29 @@ import {
 } from "react-router-dom";
 
 function renderTopPanel(){
-   {/* { currentURL !== 'webpage without top panel'  ? renderTopPanel() : ''
-            if (currentURL !== 'webpage without top panel') {
-                return ''
-            } else {
-                return <TopPanel />
-            }
-        } */}
-
+  
   return <TopPanel />
 }
 
 function renderBottomPanel(){
-  {/* { currentURL !== 'webpage without top panel'  ? renderTopPanel() : ''
-           if (currentURL !== 'webpage without top panel') {
-               return ''
-           } else {
-               return <TopPanel />
-           }
-       } */}
-
- return <BottomPanel />
+  
+  return <BottomPanel />
 }
 
 function App() {
   return (
     <Router>
-        {renderTopPanel()}
-        <Switch>
-          <Route exact path='/index' element={<HomeContent />}/>
-          <Route exact path='/about' element={<About />} />
-          <Route exact path='/faq' element={<Faq />} />
-          {/* <Route exact path='/login' element={<Login />} /> */}
-          {/* <Route exact path='/register' element={<SignUp />} /> */}
-        </Switch>
-        {renderBottomPanel()}
+      {/* <DBTopPanel />
+      <DBSidePanel /> */}
+      {window.location.pathname !== "/login" ? <TopPanel/> : ''}
+      {/* <Login /> */}
+      {/* <SignUp /> */}
+      <Switch>
+        <Route exact path='/' element={<HomeContent />} />
+        <Route exact path='/about' element={<About />} />
+        <Route exact path='/faq' element={<Faq />} />
+      </Switch>
+      {window.location.pathname !== "/login" ? <BottomPanel/> : ''}
     </Router>
   );
 }

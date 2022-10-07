@@ -4,7 +4,8 @@ import logo_img from '../../images/short_logo.png'
 function Login() {
   return (
     <main className="form-signin w-100 m-auto">
-        <form name='f' action="login" method='POST' style="flex-direction: column; justify-content: center;">
+        {/* styling issues */}
+        <form name='f' action="login" method='POST' style={{flexDirection: "column", justifyContent: "center"}}>
             <a href="/index">
                 <img className="mb-4" src={logo_img} alt="" height="100" />
             </a>

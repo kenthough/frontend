@@ -1,11 +1,11 @@
-import '../../css/indexCSS.css';
-import long_logo from '../../images/long_logo.png'
+import '../../../css/indexCSS.css';
+import long_logo from '../../../images/long_logo.png'
 
 function TopPanel() {
   return (
     <nav className="navbar sticky-top navbar-expand-md navbar-light bg-light" aria-label="navbar">
         <div className="container-fluid">
-            <a className="navbar-brand me-4 pt-1" href="/index">
+            <a className="navbar-brand me-4 pt-1" href="/">
                 <img src={long_logo} alt="logo" height="22px"/>
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navToggle"
@@ -16,7 +16,7 @@ function TopPanel() {
             <div className="collapse navbar-collapse" id="navToggle">
                 <ul className="navbar-nav ms-auto align-items-center me-auto mb-2 mb-md-0">
                     <li className="nav-item px-2">
-                        <a className="nav-link active" aria-current="page" href="/index">Home</a>
+                        <a className="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li className="nav-item px-2">
                         <a className="nav-link active" aria-current="page" href="/about">About</a>
