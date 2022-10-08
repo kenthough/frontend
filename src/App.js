@@ -37,8 +37,11 @@ function renderBottomPanel(){
 function App() {
   return (
     <Router>
-      {/* <DBTopPanel />
-      <DBSidePanel /> */}
+      {/* <DBTopPanel /> */}
+      {/* <div style={{display: "flex"}}> */}
+      {/* <DBSidePanel />
+      <Dashboard /> */}
+      {/* </div> */}
       {/* <Login /> */}
       {/* <SignUp /> */}
       {renderTopPanel()}
